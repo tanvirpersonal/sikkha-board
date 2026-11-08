@@ -65,7 +65,7 @@ See `DEVELOPMENT_ROADMAP.md` (ordered checklist by phase).
 - In progress: Phase 1 (design system).
 - Remaining: Phases 2 to 10.
 - Branch: `main`
-- Latest feature commit: `d466d5f` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
+- Latest feature commit: see `PROJECT_STATUS.md` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
 
 ## Current Session Log
 
@@ -77,7 +77,7 @@ Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, na
 - Deploy workflow is untested until Pages is switched to GitHub Actions; if the run fails, read the Actions log first.
 
 - All pages are still the shared "awaiting implementation" page; no real content yet.
-- Header/menu untested visually; 13 top-level items may wrap on desktop widths just above 1180px.
+- Header checked visually (headless Chrome screenshots) at 360, 768, 1240, 1280 px: fine. Not yet checked: Bangla language at desktop widths (longer labels may wrap), open dropdown/mobile menu states, tablet 768 after the fixes. At 320 px the site name takes three lines.
 - No global search UI yet (removed from header until it works).
 - Bangla labels exist for top-level nav only; sub-items fall back to English.
 - No sitemap, robots.txt, PWA, or 404 yet.
@@ -86,7 +86,7 @@ Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, na
 
 1. (Blocked on owner input) finish `docs/REFERENCE_AUDIT.md`; do not invent site content.
 2. Add shared components: Button, Card, Breadcrumb, StatusBadge (Official / Demonstration / Awaiting backend), state components. Refactor InDevelopment to use Breadcrumb.
-3. Visually check header/footer at 360, 768, 1280 px if browser tooling exists; fix wrapping.
+3. Visually check Bangla at desktop widths and the open dropdown/mobile menu states. Method that works in-session: `npm run build`, `npx vite preview --port 4173`, then `google-chrome --headless=new --no-sandbox --window-size=W,H --virtual-time-budget=4000 --screenshot=out.png http://localhost:4173/` and Read the PNG.
 4. Start Phase 2: homepage hero and quick-access services (one section per commit).
 5. Add global search UI once there is content to search.
 

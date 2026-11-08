@@ -16,7 +16,8 @@ Ordered checklist. Mark `[x]` only after verifying in code. Every item = one sma
 - [x] Mobile menu (accordion)
 - [x] Footer
 - [x] Layout (skip link) and routes for every nav path with shared "In development" page; 404
-- [ ] Visual check of header/footer at 360/768/1280 px and fix defects
+- [x] Visual check of header/footer at 360/1240/1280 px; fixed nav wrap and mobile brand wrap
+- [ ] Visual check of Bangla at desktop widths, open dropdown and mobile menu states
 - [ ] Shared components: Button, Card, Breadcrumb, StatusBadge, Table, empty/loading/error states
 
 ## Phase 2: Homepage

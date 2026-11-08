@@ -12,3 +12,5 @@
 - feat(layout): header with dropdown and mobile menus, footer, layout with skip link, routes for all nav paths, 404 page (`c3094fd`)
 - fix(deploy): GitHub Pages workflow so the built app is served, not raw source (`f33c8c0`)
 - fix(head): favicon added (`d466d5f`)
+- fix(navigation): desktop nav kept on one row, mobile menu below 1220px (`5151882`)
+- fix(header): compact mobile header, site name on two lines at 360px
