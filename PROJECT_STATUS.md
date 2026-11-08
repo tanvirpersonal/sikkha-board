@@ -5,7 +5,7 @@ Last updated: 2026-11-08 (session 1)
 | Item | Value |
 | --- | --- |
 | Branch | `main` |
-| Latest feature commit | _recorded by the docs commit that follows it_ |
+| Latest feature commit | `b4a4db0` (pushed, verified on remote) |
 | Build | `npm run build` passes (type-check + vite build) |
 | Tests | none yet |
 | Estimated completion | ~13% (11 phases weighted equally) |

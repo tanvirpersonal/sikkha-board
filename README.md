@@ -58,7 +58,7 @@ See `DEVELOPMENT_ROADMAP.md` (ordered checklist by phase).
 - In progress: Phase 1 (design system).
 - Remaining: Phases 2 to 10.
 - Branch: `main`
-- Latest commit / build status: see `PROJECT_STATUS.md` (updated after every commit).
+- Latest commit: `b4a4db0` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
 
 ## Current Session Log
 
