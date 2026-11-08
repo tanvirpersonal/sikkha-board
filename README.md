@@ -15,7 +15,7 @@ Design direction: midnight navy primary, warm neutral surfaces, restrained gold,
 - Date: 2026-11-08
 - Repo `tanvirpersonal/sikkha-board` was **empty** (no commits, no branches). Nothing to preserve, no debt.
 - Branch created on first push: `main` (confirmed by owner).
-- Reference website: **not yet audited**. First roadmap item for the next session (see Next Immediate Actions).
+- Reference website: **could not be read** (fetch blocked by the session allowlist). See `docs/REFERENCE_AUDIT.md`. Nav/service names come from the owner's brief, not verified against the live site. Completing the audit needs the owner to supply homepage HTML, screenshots or the menu list.
 
 ## Current Architecture
 
@@ -62,7 +62,7 @@ See `DEVELOPMENT_ROADMAP.md` (ordered checklist by phase).
 
 ## Current Session Log
 
-Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, nav data, handover docs.
+Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, nav data, handover docs; verified all files pushed; reference-site audit attempted but site unreachable (documented).
 
 ## Known Issues
 
@@ -72,7 +72,7 @@ Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, na
 
 ## Next Immediate Actions
 
-1. Audit the reference website and record services and IA in `docs/REFERENCE_AUDIT.md`.
+1. (Blocked on owner input) finish `docs/REFERENCE_AUDIT.md`; do not invent site content.
 2. Build `Header` (identity, search trigger, language toggle) and desktop mega menu from `src/data/nav.ts`.
 3. Build accessible mobile menu.
 4. Build `Footer`.

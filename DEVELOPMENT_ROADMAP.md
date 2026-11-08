@@ -4,7 +4,7 @@ Ordered checklist. Mark `[x]` only after verifying in code. Every item = one sma
 
 ## Phase 0: Audit
 - [x] Inspect repository (empty)
-- [ ] Audit reference website; write `docs/REFERENCE_AUDIT.md` (services, IA, external official links)
+- [~] Audit reference website: `docs/REFERENCE_AUDIT.md` written but INCOMPLETE (site unreachable from the session; needs owner to supply homepage HTML/screenshots/menu list)
 
 ## Phase 1: Design system
 - [x] Scaffold (Vite, React, TS)

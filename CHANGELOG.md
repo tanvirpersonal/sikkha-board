@@ -8,3 +8,4 @@
 - feat(i18n): English/Bangla label layer with fallback
 - feat(nav): primary navigation data model
 - docs: README handover, PROJECT_STATUS, DEVELOPMENT_ROADMAP, CHANGELOG
+- docs: reference website audit (incomplete: site unreachable, limits recorded)

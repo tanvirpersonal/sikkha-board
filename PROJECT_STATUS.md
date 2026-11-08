@@ -26,6 +26,10 @@ Last updated: 2026-11-08 (session 1)
 | 9 Performance and security | Not started |
 | 10 Final QA | Not started |
 
+## Blockers
+
+- Reference site audit needs owner input (see `docs/REFERENCE_AUDIT.md`). Does not block UI work.
+
 ## Next task
 
-Audit the reference website (`docs/REFERENCE_AUDIT.md`), then build Header and mega menu.
+Build Header and desktop mega menu.
