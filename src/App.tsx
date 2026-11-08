@@ -1,26 +1,22 @@
 import { Route, Routes } from 'react-router-dom';
-import { useI18n } from './i18n';
+import Layout from './components/Layout';
+import { NAV } from './data/nav';
+import InDevelopment from './pages/InDevelopment';
+import NotFound from './pages/NotFound';
 
-function Placeholder() {
-  const { t } = useI18n();
-  return (
-    <main id="main" className="container section">
-      <p className="eyebrow">{t({ en: 'Concept build', bn: 'ধারণামূলক সংস্করণ' })}</p>
-      <h1>{t({ en: 'Dhaka Education Board Portal', bn: 'ঢাকা শিক্ষা বোর্ড পোর্টাল' })}</h1>
-      <p className="muted">
-        {t({
-          en: 'In development. This is a demonstration redesign, not an official website.',
-          bn: 'উন্নয়নাধীন। এটি একটি প্রদর্শনীমূলক নকশা, অফিসিয়াল ওয়েবসাইট নয়।',
-        })}
-      </p>
-    </main>
-  );
-}
+// Every navigation path is routed so no menu link is ever broken.
+// Pages that are built get a dedicated route above this list in later phases.
+const paths = NAV.flatMap((n) => [n.path, ...(n.children?.map((c) => c.path) ?? [])]);
 
 export default function App() {
   return (
     <Routes>
-      <Route path="*" element={<Placeholder />} />
+      <Route element={<Layout />}>
+        {paths.map((p) => (
+          <Route key={p} path={p} element={<InDevelopment />} />
+        ))}
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   );
 }
