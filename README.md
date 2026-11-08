@@ -23,7 +23,9 @@ Design direction: midnight navy primary, warm neutral surfaces, restrained gold,
 - No UI framework; plain CSS with design tokens.
 
 ```
-index.html              entry, fonts, meta
+index.html              entry, fonts, meta, favicon link
+public/favicon.svg      favicon
+.github/workflows/deploy.yml  builds and deploys dist/ to GitHub Pages on push to main
 vite.config.ts          base './' for portable deploys
 src/
   main.tsx              providers + router
@@ -46,6 +48,7 @@ Commands: `npm install`, `npm run dev`, `npm run build` (type-check + build), `n
 - Primary navigation data model (13 top-level items from the spec).
 - Header: concept banner, identity, EN/বাং toggle, desktop dropdown menus (click, Escape, outside-click close, aria-expanded), mobile accordion menu. Build verified; **not yet visually checked in a browser**.
 - Footer, Layout with skip link, routes for every nav path, 404 page.
+- GitHub Pages deploy workflow (`f33c8c0`) and favicon (`d466d5f`). Fixes console 404s for `main.tsx` and `favicon.ico`, which happened because the unbuilt repo root was being served.
 
 ## Partially Completed Work
 
@@ -62,13 +65,16 @@ See `DEVELOPMENT_ROADMAP.md` (ordered checklist by phase).
 - In progress: Phase 1 (design system).
 - Remaining: Phases 2 to 10.
 - Branch: `main`
-- Latest feature commit: `c3094fd` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
+- Latest feature commit: `d466d5f` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
 
 ## Current Session Log
 
-Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, nav data, handover docs; verified all files pushed; reference-site audit attempted but site unreachable (documented); header, footer, layout, routes, 404 built.
+Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, nav data, handover docs; verified all files pushed; reference-site audit attempted but site unreachable (documented); header, footer, layout, routes, 404 built; fixed deploy 404s (Pages workflow + favicon).
 
 ## Known Issues
+
+- **Owner action needed for the site to load:** in the GitHub repo go to Settings > Pages > Build and deployment > Source = **GitHub Actions**. Until then Pages may serve raw source (blank page, 404 on `/src/main.tsx`). After pushing, check the Actions tab for a green run.
+- Deploy workflow is untested until Pages is switched to GitHub Actions; if the run fails, read the Actions log first.
 
 - All pages are still the shared "awaiting implementation" page; no real content yet.
 - Header/menu untested visually; 13 top-level items may wrap on desktop widths just above 1180px.

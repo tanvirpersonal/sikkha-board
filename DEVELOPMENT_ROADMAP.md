@@ -52,4 +52,5 @@ Ordered checklist. Mark `[x]` only after verifying in code. Every item = one sma
 - [ ] sitemap.xml, robots.txt, structured metadata, 404, PWA (if appropriate), a11y audit, Lighthouse
 
 ## Phase 10: Final QA and deployment
-- [ ] Responsive check, broken-link check, GitHub Pages deploy workflow, deployment docs
+- [x] GitHub Pages deploy workflow added early (`f33c8c0`); needs owner to enable Pages source = GitHub Actions and a first green run confirmed
+- [ ] Responsive check, broken-link check, deployment docs
