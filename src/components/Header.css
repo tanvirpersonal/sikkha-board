@@ -38,11 +38,11 @@
 
 /* Desktop nav */
 .desktop-nav { background: var(--navy-900); }
-.desktop-nav > ul { display: flex; flex-wrap: wrap; list-style: none; margin: 0 auto; padding: 0; }
+.desktop-nav > ul { display: flex; flex-wrap: nowrap; list-style: none; margin: 0 auto; padding: 0; }
 .desktop-nav li { position: relative; }
 
 .nav-link {
-  display: flex; align-items: center; gap: 6px; padding: 12px 10px;
+  display: flex; align-items: center; gap: 4px; padding: 12px 8px;
   color: #e8edf7; text-decoration: none; font: inherit; font-size: var(--fs-sm); font-weight: 500;
   background: transparent; border: 0; cursor: pointer; white-space: nowrap;
   border-bottom: 3px solid transparent;
@@ -76,11 +76,11 @@
 .m-sub[hidden] { display: none; }
 .m-sub a { display: block; padding: 12px var(--sp-8); color: var(--ink); text-decoration: none; min-height: 44px; }
 
-@media (max-width: 1179px) {
+@media (max-width: 1219px) {
   .desktop-nav { display: none; }
   .burger { display: block; }
   .brand-text small { display: none; }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1220px) {
   .mobile-nav { display: none; }
 }
