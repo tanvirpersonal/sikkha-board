@@ -1,0 +1,42 @@
+:root {
+  /* Colour: midnight navy primary, warm neutrals, restrained gold */
+  --navy-950: #060f24;
+  --navy-900: #0a1a3a;
+  --navy-800: #102650;
+  --navy-700: #1a3a72;
+  --blue-500: #2f6fdb;
+  --cyan-400: #2bb8d6;
+  --gold-500: #b8923a;
+  --gold-300: #d9bc72;
+
+  --surface: #ffffff;
+  --surface-warm: #f7f5f0;
+  --surface-sunken: #eeeae2;
+  --ink: #0e1726;
+  --ink-muted: #4a5568;
+  --line: #dcd7cc;
+  --focus: #2f6fdb;
+
+  /* Type */
+  --font-sans: 'Inter', 'Hind Siliguri', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-bn: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: clamp(2rem, 4vw, 3rem);
+
+  /* Space (4px scale) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  --radius: 6px;
+  --container: 1200px;
+  --header-h: 72px;
+}
