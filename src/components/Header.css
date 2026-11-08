@@ -84,3 +84,16 @@
 @media (min-width: 1220px) {
   .mobile-nav { display: none; }
 }
+
+@media (max-width: 480px) {
+  .identity { gap: var(--sp-2); }
+  .brand { gap: var(--sp-2); min-width: 0; }
+  .brand-mark { width: 40px; height: 40px; font-size: 1.1rem; }
+  .brand-text strong { font-size: 1rem; line-height: 1.2; }
+  .tools { gap: var(--sp-2); }
+  .lang button { padding: 6px 8px; }
+  .burger { width: 40px; height: 40px; }
+  .burger-bars, .burger-bars::before, .burger-bars::after { left: 9px; }
+  .burger-bars::before, .burger-bars::after { left: 0; }
+  .burger-bars { top: 19px; }
+}
