@@ -11,11 +11,12 @@ Ordered checklist. Mark `[x]` only after verifying in code. Every item = one sma
 - [x] Tokens and global styles
 - [x] i18n layer
 - [x] Navigation data
-- [ ] Header (identity, search trigger, language toggle)
-- [ ] Desktop mega menu
-- [ ] Mobile menu (accessible, keyboard)
-- [ ] Footer
-- [ ] Layout (skip link) and routes for every nav path with shared "In development" page
+- [x] Header (identity, language toggle; search trigger deferred until search exists)
+- [x] Desktop dropdown menus (simple dropdowns, not full mega menu; revisit if content warrants)
+- [x] Mobile menu (accordion)
+- [x] Footer
+- [x] Layout (skip link) and routes for every nav path with shared "In development" page; 404
+- [ ] Visual check of header/footer at 360/768/1280 px and fix defects
 - [ ] Shared components: Button, Card, Breadcrumb, StatusBadge, Table, empty/loading/error states
 
 ## Phase 2: Homepage

@@ -9,3 +9,4 @@
 - feat(nav): primary navigation data model
 - docs: README handover, PROJECT_STATUS, DEVELOPMENT_ROADMAP, CHANGELOG
 - docs: reference website audit (incomplete: site unreachable, limits recorded)
+- feat(layout): header with dropdown and mobile menus, footer, layout with skip link, routes for all nav paths, 404 page (`c3094fd`)

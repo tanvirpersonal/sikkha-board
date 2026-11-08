@@ -27,7 +27,9 @@ index.html              entry, fonts, meta
 vite.config.ts          base './' for portable deploys
 src/
   main.tsx              providers + router
-  App.tsx               routes (currently one placeholder route)
+  App.tsx               routes: every nav path -> InDevelopment page, * -> NotFound
+  components/           Header (+css, dropdown + mobile menu), Footer (+css), Layout (skip link)
+  pages/                InDevelopment (shared placeholder + breadcrumb), NotFound (404)
   i18n/index.tsx        I18nProvider, useI18n(), Label {en, bn?} (bn falls back to en)
   data/nav.ts           primary navigation tree (structure only)
   styles/tokens.css     colour, type, spacing tokens
@@ -42,10 +44,12 @@ Commands: `npm install`, `npm run dev`, `npm run build` (type-check + build), `n
 - Design tokens and global base styles.
 - i18n layer (language persisted in localStorage, sets `<html lang>`).
 - Primary navigation data model (13 top-level items from the spec).
+- Header: concept banner, identity, EN/বাং toggle, desktop dropdown menus (click, Escape, outside-click close, aria-expanded), mobile accordion menu. Build verified; **not yet visually checked in a browser**.
+- Footer, Layout with skip link, routes for every nav path, 404 page.
 
 ## Partially Completed Work
 
-- Phase 1 design system: header, mega menu, mobile menu, footer, layout, shared components (Button, Card, Breadcrumb, Table, states) still to build.
+- Phase 1 design system: shared components (Button, Card, Breadcrumb component, StatusBadge, Table, loading/empty/error states) still to build. Header/footer need a visual check at desktop, tablet and mobile widths (no browser tooling in this session).
 
 ## Remaining Development Tasks
 
@@ -53,32 +57,32 @@ See `DEVELOPMENT_ROADMAP.md` (ordered checklist by phase).
 
 ## Current Development Status
 
-- Estimated completion: **~13%** (method: 11 phases weighted equally; Phase 0 done = 1.0, Phase 1 about 0.4).
+- Estimated completion: **~15%** (method: 11 phases weighted equally; Phase 0 done = 1.0, Phase 1 about 0.7).
 - Completed: Phase 0.
 - In progress: Phase 1 (design system).
 - Remaining: Phases 2 to 10.
 - Branch: `main`
-- Latest commit: `b4a4db0` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
+- Latest feature commit: `c3094fd` (pushed to `main`). Build: passing. Details in `PROJECT_STATUS.md` (updated after every commit).
 
 ## Current Session Log
 
-Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, nav data, handover docs; verified all files pushed; reference-site audit attempted but site unreachable (documented).
+Session 1 (2026-11-08): audited empty repo, scaffolded project, tokens, i18n, nav data, handover docs; verified all files pushed; reference-site audit attempted but site unreachable (documented); header, footer, layout, routes, 404 built.
 
 ## Known Issues
 
-- Only a placeholder page exists; nav paths are defined but not routed yet.
+- All pages are still the shared "awaiting implementation" page; no real content yet.
+- Header/menu untested visually; 13 top-level items may wrap on desktop widths just above 1180px.
+- No global search UI yet (removed from header until it works).
 - Bangla labels exist for top-level nav only; sub-items fall back to English.
 - No sitemap, robots.txt, PWA, or 404 yet.
 
 ## Next Immediate Actions
 
 1. (Blocked on owner input) finish `docs/REFERENCE_AUDIT.md`; do not invent site content.
-2. Build `Header` (identity, search trigger, language toggle) and desktop mega menu from `src/data/nav.ts`.
-3. Build accessible mobile menu.
-4. Build `Footer`.
-5. Build `Layout` (skip link, header, outlet, footer) and wire routes with a shared "In development" page so no link is broken.
-6. Add shared components: Button, Card, Breadcrumb, StatusBadge (Official / Demonstration / Awaiting backend).
-7. Commit, push, update docs; then start Phase 2 (homepage).
+2. Add shared components: Button, Card, Breadcrumb, StatusBadge (Official / Demonstration / Awaiting backend), state components. Refactor InDevelopment to use Breadcrumb.
+3. Visually check header/footer at 360, 768, 1280 px if browser tooling exists; fix wrapping.
+4. Start Phase 2: homepage hero and quick-access services (one section per commit).
+5. Add global search UI once there is content to search.
 
 ## Important Technical Decisions
 
